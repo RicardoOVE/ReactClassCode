@@ -1,8 +1,14 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 const PersonCardFunctional = ({firstName, lastName, age, city}) => {
     
     const [civilState, setCivilState] = useState('Soltero');
     const [ageUpdated, setAge] = useState(age);
+
+    // useEffect se ejecuta al montar y al actualizar algo de nuestro estado
+    useEffect(() => {
+        console.log('Se montó o hubo algún cambio')
+    }, [civilState])
+
 
     const changeCivilState = () => {
         if(civilState === 'Soltero'){
@@ -17,7 +23,7 @@ const PersonCardFunctional = ({firstName, lastName, age, city}) => {
     }
 
     return (
-        <div className="card bg-warning text-dark align-items-center">
+        <div className="card bg-warning text-dark align-items-center m-2">
             <small>Functional Card</small>
             <h4>{firstName} {lastName}</h4>
             <p>

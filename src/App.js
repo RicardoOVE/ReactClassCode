@@ -4,8 +4,35 @@ import FirstComponentFunctional from "./components/FirstComponentFunctional/Firs
 import PersonCard from "./components/PersonCard/PersonCard";
 import PersonCardFunctional from "./components/PersonCardFunctional/PersonCardFunctional";
 import Form from "./components/Form/Form";
+import ComponenteApi from "./components/ComponenteApi/ComponenteApi";
 
 class App extends React.Component {
+
+  constructor(props){
+    super(props);
+    this.state = {
+      personas : [
+        {
+          firstName : 'Ricardo',
+          lastName : 'Ortiz',
+          age : 27,
+          city : 'Medellín'
+        },
+        {
+          firstName : 'Juan',
+          lastName : 'Perez',
+          age : 50,
+          city : 'Bogotá'
+        },
+        {
+          firstName : 'Gloria',
+          lastName : 'Hernandez',
+          age : 32,
+          city : 'Lima'
+        }
+      ]
+    }
+    }
 
   render() {
     
@@ -23,10 +50,17 @@ class App extends React.Component {
       
         <Form />
 
+        {
+          //this.state.personas.map(persona => 
+          //  <PersonCardFunctional firstName = {persona.firstName} lastName = {persona.lastName} age = {persona.age} city = {persona.city} />)
+            
+        }
+
+        <ComponenteApi />
+
       </div>
     );
   }
 }
 
 export default App;
-
