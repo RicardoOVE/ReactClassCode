@@ -5,6 +5,7 @@ import PersonCard from "./components/PersonCard/PersonCard";
 import PersonCardFunctional from "./components/PersonCardFunctional/PersonCardFunctional";
 import Form from "./components/Form/Form";
 import ComponenteApi from "./components/ComponenteApi/ComponenteApi";
+import ComponenteAxios from "./components/ComponenteAxios/ComponenteAxios";
 
 class App extends React.Component {
 
@@ -57,6 +58,8 @@ class App extends React.Component {
         }
 
         <ComponenteApi />
+
+        <ComponenteAxios />
 
       </div>
     );
