@@ -59,7 +59,7 @@ class App extends React.Component {
 
           <Switch>
             <Route path='/' exact render={()=> <FirstComponent />} />
-            <Route path='/funcional' render={()=> <FirstComponentFunctional/>} />
+            <Route path='/funcional/:texto' render={(routeProps)=> <FirstComponentFunctional {...routeProps}/>} />
             <Route path='/formulario'  render={()=> <Form/>} />
             <Route path='/api'  render={()=> <ComponenteApi />} />
             <Route path='/apiaxios'  render={()=> <ComponenteAxios/>} />
